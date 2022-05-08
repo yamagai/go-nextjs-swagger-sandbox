@@ -1,0 +1,32 @@
+swagger: '2.0'
+info:
+  title: echo
+  version: '1.0'
+host: 'localhost:3000'
+schemes:
+  - http
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /echo:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+          examples: {}
+      operationId: get-echo
+      parameters:
+        - type: string
+          in: query
+          name: name
+          description: echo name
+definitions: {}
